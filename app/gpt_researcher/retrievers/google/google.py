@@ -4,8 +4,6 @@
 import os
 import requests
 import json
-from tavily import TavilyClient
-
 
 class GoogleSearch:
     """
@@ -20,7 +18,6 @@ class GoogleSearch:
         self.query = query
         self.api_key = self.get_api_key() #GOOGLE_API_KEY
         self.cx_key = self.get_cx_key() #GOOGLE_CX_KEY
-        self.client = TavilyClient(self.api_key)
 
     def get_api_key(self):
         """
