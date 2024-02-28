@@ -106,7 +106,7 @@ def scrape_urls(urls, cfg=None):
     try:
         content = Scraper(urls, user_agent).run()
     except Exception as e:
-        print(f"{Fore.RED}Error in scrape_urls: {e}{Style.RESET_ALL}")
+        print(f"Error in scrape_urls: {e}")
     return content
 
 
@@ -182,7 +182,7 @@ async def summarize_url(query, raw_data, agent_role_prompt, cfg):
             llm_provider=cfg.llm_provider
         )
     except Exception as e:
-        print(f"{Fore.RED}Error in summarize: {e}{Style.RESET_ALL}")
+        print(f"Error in summarize: {e}")
     return summary
 
 
@@ -217,7 +217,7 @@ async def generate_report(query, context, agent_role_prompt, report_type, websoc
             max_tokens=cfg.smart_token_limit
         )
     except Exception as e:
-        print(f"{Fore.RED}Error in generate_report: {e}{Style.RESET_ALL}")
+        print(f"Error in generate_report: {e}")
 
     return report
 
