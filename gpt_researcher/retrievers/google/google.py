@@ -76,9 +76,9 @@ class GoogleSearch:
             if "youtube.com" in result["link"]:
                 continue
             search_result = {
-                "title": result["title"],
-                "href": result["link"],
-                "body": result["snippet"],
+                "title": result.get("title"),
+                "href": result.get("link"),
+                "body": result.get("snippet"),
             }
             search_results.append(search_result)
 

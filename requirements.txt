@@ -1,9 +1,10 @@
-asyncio==3.4.3
 beautifulsoup4==4.12.2
 openai~=1.6.1
+tiktoken==0.6.0 # needed for openai
 langchain==0.0.353
 arxiv==2.0.0
 PyMuPDF==1.23.6
 requests==2.31.0
 uvicorn==0.24.0.post1
 fastapi==0.104.1
+python-dotenv==1.0.1
